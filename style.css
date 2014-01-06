@@ -1,0 +1,16 @@
+
+body {
+    margin: 0;
+}
+
+#bg {
+    fill: hsl(233, 100%, 79%);
+    
+}
+
+.half {
+    stroke: white;
+    stroke-width: 8px;
+    fill: none;
+    stroke-linecap: round;
+}
