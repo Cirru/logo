@@ -68,7 +68,8 @@ letterR = ->
   g
 
 do paint = ->
-
+  # http://jsfiddle.net/TWBNE/
+  # Maybe in the future: http://stackoverflow.com/a/14871278/883571
   window.shadow = svg.filter Snap.filter.shadow(4, 4, 6, '#88d')
 
   paper.circle(200, 200, 190).attr fill: '#aaf', filter: shadow
