@@ -108,12 +108,18 @@
 
   (paint = function() {
     var g;
-    paper.circle(200, 200, 200).attr({
-      fill: '#aaf'
+    window.shadow = svg.filter(Snap.filter.shadow(4, 4, 6, '#88d'));
+    paper.circle(200, 200, 190).attr({
+      fill: '#aaf',
+      filter: shadow
     });
     g = paper.g();
-    g.add(letterC());
-    return g.add(letterR());
+    g.add(letterC().attr({
+      filter: shadow
+    }));
+    return g.add(letterR().attr({
+      filter: shadow
+    }));
   })();
 
 }).call(this);
