@@ -1,12 +1,15 @@
 
 svg = Snap '#svg'
+
 svg.attr
   width: 400
   height: 400
+  xmlns: "http://www.w3.org/2000/svg"
+  
 {paper} = svg
 
-paper.circle(200, 200, 200).attr
-  id: "bg"
+config =
+  width: 20
 
 square = (x) ->
   x * x
@@ -27,24 +30,27 @@ halfCircle = (s, e) ->
   # http://blog.benjaminranck.com/2011/07/28/arc-paths-in-svg
   r = Math.sqrt(square(s.x - e.x) + square(s.y - e.y)) / 2
   half = paper.path "M#{s.x} #{s.y} A#{r},#{r} 0 0,0 #{e.x} #{e.y}"
-  half.attr class: "half"
 
-do letterC = ->
-  start = x: 170, y: 150
-  delta = x: 0, y: 24
+letterC = ->
+  start = x: 180, y: 140
+  delta = x: 0, y: 26
   step = times delta, 2
   A = add start, delta
   B = sub start, delta
   C = add A, step
   D = sub B, step
   E = add C, step
-  halfCircle A, B
-  halfCircle B, C
-  halfCircle C, D
-  halfCircle D, E
+  g = paper.g()
+  g.add (halfCircle A, B)
+  g.add (halfCircle B, C)
+  g.add (halfCircle C, D)
+  g.add (halfCircle D, E)
+  g.attr stroke: "white", strokeWidth: config.width
+  , fill: "none", strokeLinecap: "round"
+  g
 
-do letterR = ->
-  start = x: 280, y: 260
+letterR = ->
+  start = x: 270, y: 280
   delta = x: 20, y: 0
   step = times delta, 2
   A = add start, delta
@@ -52,7 +58,22 @@ do letterR = ->
   C = add A, step
   D = sub B, step
   E = add C, step
-  halfCircle A, B
-  halfCircle B, C
-  halfCircle C, D
-  # halfCircle D, E
+  g = paper.g()
+  g.add (halfCircle A, B)
+  g.add (halfCircle B, C)
+  g.add (halfCircle C, D)
+  # g.add (halfCircle D, E)
+  g.attr stroke: "white", strokeWidth: config.width
+  , fill: "none", strokeLinecap: "round"
+  g
+
+do paint = ->
+
+  paper.circle(200, 200, 200).attr
+    fill: '#aaf'
+
+  g = paper.g()
+  g.add letterC()
+  g.add letterR()
+
+  # g.attr transform: "rotate(-30, 200, 200)"
