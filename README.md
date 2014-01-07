@@ -2,12 +2,15 @@
 Logo of Cirru
 ------
 
-Live demo http://repo.jiyinyiyong.me/logo/
+Live demo http://logo.cirru.org/
 
-SVG ![](http://repo.jiyinyiyong.me/logo/cirru.svg)
-PNG icon 32x32 ![](http://repo.jiyinyiyong.me/logo/cirru.png)
+SVG ![](http://logo.cirru.org/cirru.svg)
+PNG icon 128x128 ![](http://logo.cirru.org/cirru-128x128.png)
+PNG icon 32x32 ![](http://logo.cirru.org/cirru-32x32.png)
 
 Cirru the name if from "cirrus cloud", so it should look like cloud.
+
+PNG files converted with http://www.fileformat.info/convert/image/svg2raster.htm
 
 ### License
 
