@@ -69,11 +69,12 @@ letterR = ->
 
 do paint = ->
 
-  paper.circle(200, 200, 200).attr
-    fill: '#aaf'
+  window.shadow = svg.filter Snap.filter.shadow(4, 4, 6, '#88d')
+
+  paper.circle(200, 200, 190).attr fill: '#aaf', filter: shadow
 
   g = paper.g()
-  g.add letterC()
-  g.add letterR()
+  g.add letterC().attr filter: shadow
+  g.add letterR().attr filter: shadow
 
   # g.attr transform: "rotate(-30, 200, 200)"
