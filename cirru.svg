@@ -1,15 +1,26 @@
 <svg id="svg" width="400" height="400" xmlns="http://www.w3.org/2000/svg">
     <desc>Created with Snap</desc>
-    <defs></defs>
-    <circle cx="200" cy="200" r="200" fill="#aaaaff" style=""></circle>
+    <defs>
+        <filter id="Shq57xd4x1" filterUnits="userSpaceOnUse">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="6"></feGaussianBlur>
+            <feOffset dx="4" dy="4" result="offsetblur"></feOffset>
+            <feFlood flood-color="#8888dd"></feFlood>
+            <feComposite in2="offsetblur" operator="in"></feComposite>
+            <feMerge>
+                <feMergeNode></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <circle cx="200" cy="200" r="190" fill="#aaaaff" filter="url('#Shq57xd4x1')" style=""></circle>
     <g>
-        <g stroke="#ffffff" fill="none" style="stroke-width: 20px; stroke-linecap: round;">
+        <g stroke="#ffffff" fill="none" filter="url('#Shq57xd4x1')" style="stroke-width: 20px; stroke-linecap: round;">
             <path d="M180 166 A26,26 0 0,0 180 114"></path>
             <path d="M180 114 A52,52 0 0,0 180 218"></path>
             <path d="M180 218 A78,78 0 0,0 180 62"></path>
             <path d="M180 62 A104,104 0 0,0 180 270"></path>
         </g>
-        <g stroke="#ffffff" fill="none" style="stroke-width: 20px; stroke-linecap: round;">
+        <g stroke="#ffffff" fill="none" filter="url('#Shq57xd4x1')" style="stroke-width: 20px; stroke-linecap: round;">
             <path d="M290 280 A20,20 0 0,0 250 280"></path>
             <path d="M250 280 A40,40 0 0,0 330 280"></path>
             <path d="M330 280 A60,60 0 0,0 210 280"></path>
