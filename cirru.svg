@@ -1,9 +1,9 @@
 <svg id="svg" width="400" height="400" xmlns="http://www.w3.org/2000/svg">
     <desc>Created with Snap</desc>
     <defs>
-        <filter id="Shq57xd4x1" filterUnits="userSpaceOnUse">
-            <feGaussianBlur in="SourceAlpha" stdDeviation="6"></feGaussianBlur>
-            <feOffset dx="4" dy="4" result="offsetblur"></feOffset>
+        <filter id="Shq5cj64g1" filterUnits="userSpaceOnUse">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="1"></feGaussianBlur>
+            <feOffset dx="8" dy="8" result="offsetblur"></feOffset>
             <feFlood flood-color="#8888dd"></feFlood>
             <feComposite in2="offsetblur" operator="in"></feComposite>
             <feMerge>
@@ -12,18 +12,16 @@
             </feMerge>
         </filter>
     </defs>
-    <circle cx="200" cy="200" r="190" fill="#aaaaff" filter="url('#Shq57xd4x1')" style=""></circle>
+    <circle cx="200" cy="200" r="190" fill="#aaaaff" filter="url('#Shq5cj64g1')" style=""></circle>
     <g>
-        <g stroke="#ffffff" fill="none" filter="url('#Shq57xd4x1')" style="stroke-width: 20px; stroke-linecap: round;">
-            <path d="M180 166 A26,26 0 0,0 180 114"></path>
-            <path d="M180 114 A52,52 0 0,0 180 218"></path>
-            <path d="M180 218 A78,78 0 0,0 180 62"></path>
-            <path d="M180 62 A104,104 0 0,0 180 270"></path>
+        <g stroke="#ffffff" fill="none" filter="url('#Shq5cj64g1')" style="stroke-width: 30px; stroke-linecap: round;">
+            <path d="M193 190 A30,30 0 0,0 193 130"></path>
+            <path d="M193 130 A60,60 0 0,0 193 250"></path>
+            <path d="M193 250 A90,90 0 0,0 193 70"></path>
+            <path d="M193 70 A120,120 0 0,0 193 310"></path>
         </g>
-        <g stroke="#ffffff" fill="none" filter="url('#Shq57xd4x1')" style="stroke-width: 20px; stroke-linecap: round;">
-            <path d="M290 280 A20,20 0 0,0 250 280"></path>
-            <path d="M250 280 A40,40 0 0,0 330 280"></path>
-            <path d="M330 280 A60,60 0 0,0 210 280"></path>
+        <g stroke="#ffffff" fill="none" filter="url('#Shq5cj64g1')" style="stroke-width: 30px; stroke-linecap: round;">
+            <path d="M270 310 A70,70 0 0,1 340 240"></path>
         </g>
     </g>
 </svg>

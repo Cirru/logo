@@ -9,7 +9,7 @@ svg.attr
 {paper} = svg
 
 config =
-  width: 20
+  width: 30
 
 square = (x) ->
   x * x
@@ -31,9 +31,13 @@ halfCircle = (s, e) ->
   r = Math.sqrt(square(s.x - e.x) + square(s.y - e.y)) / 2
   half = paper.path "M#{s.x} #{s.y} A#{r},#{r} 0 0,0 #{e.x} #{e.y}"
 
+quaterCircle = (s, e) ->
+  r = Math.sqrt ((square(s.x - e.x) + square(s.y - e.y)) / 2)
+  half = paper.path "M#{s.x} #{s.y} A#{r},#{r} 0 0,1 #{e.x} #{e.y}"
+
 letterC = ->
-  start = x: 180, y: 140
-  delta = x: 0, y: 26
+  start = x: 193, y: 160
+  delta = x: 0, y: 30
   step = times delta, 2
   A = add start, delta
   B = sub start, delta
@@ -50,18 +54,12 @@ letterC = ->
   g
 
 letterR = ->
-  start = x: 270, y: 280
-  delta = x: 20, y: 0
-  step = times delta, 2
-  A = add start, delta
-  B = sub start, delta
-  C = add A, step
-  D = sub B, step
-  E = add C, step
+  center = x: 340, y: 310
+  r = 70
+  start = x: (center.x - r), y: center.y
+  end = x: center.x, y: (center.y - r)
   g = paper.g()
-  g.add (halfCircle A, B)
-  g.add (halfCircle B, C)
-  g.add (halfCircle C, D)
+  g.add (quaterCircle start, end)
   # g.add (halfCircle D, E)
   g.attr stroke: "white", strokeWidth: config.width
   , fill: "none", strokeLinecap: "round"
@@ -70,7 +68,8 @@ letterR = ->
 do paint = ->
   # http://jsfiddle.net/TWBNE/
   # Maybe in the future: http://stackoverflow.com/a/14871278/883571
-  window.shadow = svg.filter Snap.filter.shadow(4, 4, 6, '#88d')
+  offset = 8
+  window.shadow = svg.filter Snap.filter.shadow(offset, offset, 1, '#88d')
 
   paper.circle(200, 200, 190).attr fill: '#aaf', filter: shadow
 
