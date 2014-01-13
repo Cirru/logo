@@ -110,9 +110,9 @@
   };
 
   (paint = function() {
-    var g, offset;
+    var g, offset, shadow;
     offset = 8;
-    window.shadow = svg.filter(Snap.filter.shadow(offset, offset, 1, '#88d'));
+    shadow = svg.filter(Snap.filter.shadow(offset, offset, 0, '#000', 0.1));
     paper.circle(200, 200, 190).attr({
       fill: '#aaf',
       filter: shadow

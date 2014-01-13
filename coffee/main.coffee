@@ -69,7 +69,8 @@ do paint = ->
   # http://jsfiddle.net/TWBNE/
   # Maybe in the future: http://stackoverflow.com/a/14871278/883571
   offset = 8
-  window.shadow = svg.filter Snap.filter.shadow(offset, offset, 1, '#88d')
+  # For opacity: https://github.com/adobe-webplatform/Snap.svg/issues/165
+  shadow = svg.filter Snap.filter.shadow(offset, offset, 0, '#000', 0.1)
 
   paper.circle(200, 200, 190).attr fill: '#aaf', filter: shadow
 
